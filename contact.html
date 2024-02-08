@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="icon" type="image/x-icon" href="images/logo.png">
+  <link rel="stylesheet" href="contact.css">
+</head>
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+<script>
+  function submitForm(event) {
+    event.preventDefault(); // Empêche le comportement par défaut du formulaire
+
+    // Afficher le loader
+    document.querySelector('.loader').style.display = 'block';
+
+    // Envoyer le formulaire
+    setTimeout(function() {
+      // Rediriger vers la page "thanks.html" après 3 secondes
+      window.location.href = 'thanks.html';
+    }, 3000);
+  }
+</script>
+<style>
+  .loader {
+    width: 50px;
+    aspect-ratio: 1;
+    display: grid;
+    color: #854f1d;
+    background: radial-gradient(farthest-side, currentColor calc(100% - 6px),#0000 calc(100% - 5px) 0);
+    -webkit-mask: radial-gradient(farthest-side,#0000 calc(100% - 13px),#000 calc(100% - 12px));
+    border-radius: 50%;
+    animation: l19 2s infinite linear;
+  }
+  .loader::before,
+  .loader::after {    
+    content: "";
+    grid-area: 1/1;
+    background:
+      linear-gradient(currentColor 0 0) center,
+      linear-gradient(currentColor 0 0) center;
+    background-size: 100% 10px,10px 100%;
+    background-repeat: no-repeat;
+  }
+  .loader::after {
+    transform: rotate(45deg);
+  }
+
+  @keyframes l19 { 
+    100%{transform: rotate(1turn)}
+  }
+</style>
+<body>
+  <section class="container">
+    <header>Registration Form</header>
+    <form class="form" onsubmit="submitForm(event);">
+      <div class="input-box">
+        <label>Full Name</label>
+        <input type="text" name="name" placeholder="Full name">
+      </div>
+      <div class="column">
+        <div class="input-box">
+          <label>Phone Number</label>
+          <input placeholder="Enter phone number" name="number" type="telephone">
+        </div>
+        <div class="input-box">
+          <label>Birth Date</label>
+          <input name="birth" placeholder="Enter birth date" type="date">
+        </div>
+      </div>
+      <div class="gender-box">
+        <label>Gender</label>
+        <div class="gender-option">
+          <div class="gender">
+            <input checked="" name="gender" id="check-male" type="radio">
+            <label for="check-male">Male</label>
+          </div>
+          <div class="gender">
+            <input name="gender" id="check-female" type="radio">
+            <label for="check-female">Female</label>
+          </div>
+        </div>
+      </div>
+      <div class="input-box address">
+        <label>Address</label>
+        <input required name="address" placeholder="Enter street address" type="text">
+        <div class="column">
+          <div class="select-box">
+            <select>
+              <option hidden="">Country</option>
+              <option>MOR</option>
+              <option>USA</option>
+              <option>UK</option>
+              <option>Germany</option>
+              <option>Japan</option>
+            </select>
+          </div>
+          <input required name="city" placeholder="Enter your city" type="text">
+        </div>
+      </div>
+      <button type="submit">Submit</button>
+      <button><a href="coffee.html">Back to the main page</a></button>
+      <input type="hidden" name="_captcha" value="false">
+      <input type="hidden" name="_template" value="table">
+    </form>
+
+    <div class="loader" style="display: none;"></div>
+  </section>
+</body>
+</html>

@@ -1,0 +1,143 @@
+<!-- info.html -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Info about founder</title>
+    <link rel="icon" type="image/x-icon" href="images/logo.png">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: url('./images/contactwp.jpg') no-repeat center center fixed;
+            background-size: cover;
+            height: 100vh;
+            margin: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .founder-container {
+            display: flex;
+            align-items: center;
+            max-width: 800px;
+            margin: 20px;
+            background-color: rgba(255, 255, 255, 0.8);
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .founder-image {
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            overflow: hidden;
+            margin-right: 20px;
+            transition: border 0.3s ease-in-out;
+        }
+
+        .founder-image:hover {
+            border: 2px solid #B8621B;
+        }
+
+        .founder-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .founder-details {
+            max-width: 400px;
+        }
+
+        .founder-name {
+            font-size: 24px;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+
+        .founder-description {
+            font-size: 16px;
+            line-height: 1.5;
+        }
+
+        .btn{
+    padding: 15px 25px;
+    border: unset;
+    border-radius: 15px;
+    color: #212121;
+    z-index: 1;
+    background: #e8e8e8;
+    position: relative;
+    font-weight: 1000;
+    font-size: 17px;
+    -webkit-box-shadow: 4px 8px 19px -3px rgba(0,0,0,0.27);
+    box-shadow: 4px 8px 19px -3px rgba(0,0,0,0.27);
+    transition: all 250ms;
+    overflow: hidden;
+   }
+   
+   .btn:hover {
+    color: #e8e8e8;
+    background: #3C2A21;
+   }
+   
+   .btn:hover::before {
+    width: 100%;
+   }
+
+
+        @media screen and (max-width: 768px) {
+            .founder-container {
+                flex-direction: column;
+                align-items: center;
+            }
+            .founder-details {
+                max-width: 100%;
+                text-align: center;
+                margin-top: 20px; 
+            }
+        }
+
+        
+::-webkit-scrollbar {
+    width: 12px; 
+}
+
+
+::-webkit-scrollbar-thumb {
+    background-color: #B8621B; 
+}
+
+::-webkit-scrollbar-track {
+    background: #f1f1f1; 
+}
+
+    </style>
+</head>
+<body>
+
+    <div class="founder-container">
+        <div class="founder-image">
+            <img src="images/founder.jpg" alt="Founder Image">
+        </div>
+        <div class="founder-details">
+            <div class="founder-name">Ezzouek Hamza</div>
+            <div class="founder-description">
+                <b>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eveniet, veritatis quisquam odio magni culpa corrupti recusandae quas officiis ratione aliquam explicabo, perspiciatis, earum iste assumenda vero consequatur voluptatum quam. Cum nam non culpa mollitia odio ad fuga beatae rerum officia.</b>
+            </div>
+        </div>
+    </div>
+    
+    <a href="coffee.html" class="btn"><span>Back to the main page</span></a>
+    
+    
+    
+</body>
+</html>
+
+
+
